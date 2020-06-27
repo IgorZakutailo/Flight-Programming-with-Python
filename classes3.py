@@ -10,12 +10,14 @@ class Flight:
         print(f"Flight destination: {self.destination}")
         print(f"Flight duration: {self.duration}")
 
-    def delay(self, amount):
-        self.duration += amount
+    def delay(self, amount):  #возможность задержать полет, это новый метод с названием задержка
+        self.duration += amount  #срок который был раньше, к нему прибавляем сумму
+                                 # Мы собираемся сделать f1.delay, чтобы вызвать метод задержки, передавая в качестве аргумента количество
+                                 # Так что задержка технически принимает два аргумента - себя и количество
 
 def main():
         f1 = Flight(origin="New York", destination="Paris", duration=540)
-        f1.delay(10)
+        f1.delay(100)
         f1.print_info()
 
 
